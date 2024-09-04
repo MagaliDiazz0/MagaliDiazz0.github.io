@@ -23,7 +23,7 @@ section {
 
 /* Estilos para el pie de página */
 #main-footer {
-    color: white;
+    color: #ff6600;
     text-align: center;
     padding: 10px 0;
     width: 100%;
@@ -49,13 +49,16 @@ section {
     color: #fff;
     cursor: pointer;
   }
+
 .botones button:hover {
     background-color: #e64d00;
   }
 
 .imagenes img{
-    width: 110px;
+    max-width: 15%;
+    margin: 5px;
     height: auto;
+
 }
 
 
@@ -71,6 +74,7 @@ section {
     max-width: 200px; /* Ajusta el ancho máximo de la imagen */
     margin-right: 20px; /* Margen a la derecha para separar la imagen del texto */
     border: 5px solid  #ff6600;
+
 }
   
 #about p {
@@ -79,5 +83,99 @@ section {
 }
 
 #about h2{
-    font-size: 50px;
+    font-size: 2.5rem;
+}
+
+/* Media Queries */
+
+/* Para dispositivos con pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .imagenes img {
+        max-width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagen-yo {
+        max-width: 50%;
+        margin-right: 0;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    .botones button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para tabletas y pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .imagenes img {
+        max-width: 30%;
+    }
+
+    #about {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .imagen-yo {
+        max-width: 150px;
+        margin-right: 15px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .botones button {
+        padding: 10px 22px;
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .imagenes img {
+        max-width: 15%;
+    }
+
+    #about {
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    .imagen-yo {
+        max-width: 200px;
+        margin-right: 20px;
+    }
+
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
+    .botones button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }
